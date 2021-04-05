@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(HomePage());
+  runApp(MaterialApp(home: HomePage()));
 }
 
 class HomePage extends StatefulWidget {
