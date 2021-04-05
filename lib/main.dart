@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     rippleController =
         AnimationController(vsync: this, duration: Duration(seconds: 1));
     scaleController =
-        AnimationController(vsync: this, duration: Duration(seconds: 10));
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
 
     rippleAnimation =
         Tween<double>(begin: 80.0, end: 90.0).animate(rippleController)
