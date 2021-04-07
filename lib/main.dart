@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   Animation<double> rippleAnimation;
   Animation<double> scaleAnimation;
+  bool isClicked = false;
 
   @override
   void initState() {
@@ -36,8 +37,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             }
           });
     scaleAnimation =
-        Tween<double>(begin: 1.0, end: 30.0).animate(scaleController);
-
+        Tween<double>(begin: 1.0, end: 50.0).animate(scaleController);
     rippleController.forward();
   }
 
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Align(
-        alignment: Alignment.bottomCenter,
+        alignment: Alignment.center,
         child: AnimatedBuilder(
           animation: rippleAnimation,
           builder: (context, child) => Container(
